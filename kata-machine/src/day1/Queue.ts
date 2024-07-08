@@ -45,6 +45,10 @@ export default class Queue<T> {
         this.head = this.head?.next;
         this.length--;
 
+        if (this.length === 0) {
+            this.tail = undefined;
+        }
+
         return firstItem?.value;
     }
 
