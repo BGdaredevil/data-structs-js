@@ -131,13 +131,13 @@ export default class DoublyLinkedList<T> {
         }
 
         if (curr === this.head) {
-            this.head = this.tail = curr.next;
+            this.head = curr.next;
             this.length--;
             return curr.value;
         }
 
         if (curr === this.tail) {
-            this.head = this.tail = curr.prev;
+            this.tail = curr.prev;
             this.length--;
             return curr.value;
         }
