@@ -99,6 +99,9 @@ export default class DoublyLinkedList<T> {
 
         newNode.next = curr?.next;
         newNode.prev = curr;
+        if (curr.next?.prev) {
+            curr.next.prev = newNode
+        }
 
         curr.next = newNode;
         this.length++;
