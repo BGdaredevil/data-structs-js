@@ -7,5 +7,5 @@ export default function dfs(head: BinaryNode<number> | null, needle: number): bo
         return true;
     }
 
-    return needle < head.value ? dfs(head.left, needle) : dfs(head.right, needle);
+    return head.value < needle ? dfs(head.right, needle) : dfs(head.left, needle);
 }
